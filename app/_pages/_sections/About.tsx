@@ -1,12 +1,15 @@
 import TextReveal from "@/app/_components/TextReveal";
-
+import Certifications from "@/app/_pages/_sections/Certifications";
+import Education from "@/app/_pages/_sections/Education";
 
 export default function About() {
   return (
-    <section id="about" >
+    <section id="about" className="space-y-20">
+      <TextReveal text="I design and engineer software at the intersection of performance, modern design, and scalable architecture. Driven by curiosity and craft, I focus on building high-impact web applications with clean code, intuitive interactions, and uncompromising attention to detail." />
 
-            <TextReveal text="Hi i am nahid, a cse grad, full stack dev, everything you can know about me through this profile, it is my personal portfolio website. I am from Dhaka, Bangladesh. I love to build software that solves real-world problems. I am also a big fan of open source and I try to contribute to open source projects whenever I can. "/>
+      <Education />
 
-        </section>
-  )
+      <Certifications />
+    </section>
+  );
 }

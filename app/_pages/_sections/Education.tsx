@@ -1,3 +1,5 @@
+import SectionHeader from "@/app/_components/SectionHeader";
+
 interface EducationItem {
   degree: string;
   field: string;
@@ -5,48 +7,43 @@ interface EducationItem {
   location: string;
   period: string;
   gpa?: string;
-  highlights: string[];
 }
 
 const educationData: EducationItem[] = [
   {
-    degree: "Bachelor of Science",
+    degree: "B.Sc.",
     field: "Computer Science & Engineering",
-    institution: "University of Dhaka",
+    institution: "Daffodil International University",
     location: "Dhaka, Bangladesh",
-    period: "2020 – 2024",
-    gpa: "3.72 / 4.00",
-    highlights: [
-      "Specialized in Software Engineering and Distributed Systems",
-      "Completed capstone project on real-time collaborative web applications",
-      "Active member of the Programming Club and Open Source Society",
-      "Maintained Dean's List recognition for 3 consecutive semesters",
-    ],
+    period: "2021 – 2025",
+    gpa: "CGPA: 3.50",
   },
   {
-    degree: "Higher Secondary Certificate",
-    field: "Science",
-    institution: "Notre Dame College",
-    location: "Dhaka, Bangladesh",
-    period: "2017 – 2019",
-    gpa: "5.00 / 5.00",
-    highlights: [
-      "Perfect GPA in Science stream with Mathematics & Physics concentration",
-      "Merit scholarship recipient for academic excellence",
-      "Led the college's technology and innovation club",
-    ],
+    degree: "HSC",
+    field: "Higher Secondary Certificate",
+    institution: "Joypurhat Govt. College",
+    location: "Joypurhat, Bangladesh",
+    period: "2020",
+    gpa: "GPA: 4.83",
+  },
+  {
+    degree: "SSC",
+    field: "Secondary School Certificate",
+    institution: "R.B Govt. High School",
+    location: "Joypurhat, Bangladesh",
+    period: "2018",
+    gpa: "GPA: 5.00",
   },
 ];
 
 export default function Education() {
   return (
     <section id="education">
-      <header className="mb-20">
-        <p className="uppercase tracking-widest text-blue-600 text-sm font-medium">
-          Academic Background
-        </p>
-        <h2 className="text-5xl font-bold mt-4">Education</h2>
-      </header>
+      <SectionHeader
+        count="01"
+        title="Education"
+        subTitle="Academic Background"
+      />
 
       <div className="space-y-8">
         {educationData.map((edu, index) => (
@@ -65,12 +62,14 @@ export default function Education() {
                   </span>
                   {edu.gpa && (
                     <span className="inline-block bg-gray-50 text-gray-600 text-xs font-medium px-3 py-1 rounded-full border border-gray-200">
-                      GPA {edu.gpa}
+                      {edu.gpa}
                     </span>
                   )}
                 </div>
 
-                <h3 className="text-2xl font-bold text-gray-900">{edu.field}</h3>
+                <h3 className="text-2xl font-bold text-gray-900">
+                  {edu.field}
+                </h3>
 
                 <p className="text-lg font-medium text-gray-700">
                   {edu.institution}
@@ -88,21 +87,6 @@ export default function Education() {
                   {edu.period}
                 </span>
               </div>
-            </div>
-
-            {/* Highlights */}
-            <div className="mt-8 pt-8 border-t border-gray-100">
-              <ul className="grid sm:grid-cols-2 gap-3">
-                {edu.highlights.map((highlight, hi) => (
-                  <li
-                    key={hi}
-                    className="flex items-start gap-3 text-sm text-gray-600 leading-relaxed"
-                  >
-                    <span className="mt-1.5 shrink-0 w-1.5 h-1.5 rounded-full bg-blue-500" />
-                    {highlight}
-                  </li>
-                ))}
-              </ul>
             </div>
           </div>
         ))}

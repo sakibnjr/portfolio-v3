@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -10,38 +10,35 @@ interface TextRevealProps {
   className?: string;
 }
 
-export default function TextReveal({
-  text,
-  className = "",
-}: TextRevealProps) {
+export default function TextReveal({ text, className = "" }: TextRevealProps) {
   const containerRef = useRef<HTMLParagraphElement>(null);
 
-useEffect(() => {
-  const ctx = gsap.context(() => {
-    const words = gsap.utils.toArray<HTMLSpanElement>(".word");
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      const words = gsap.utils.toArray<HTMLSpanElement>(".word");
 
-    gsap.set(words, {
-      color: "#6b7280",
-    });
+      gsap.set(words, {
+        color: "#e9ecef",
+      });
 
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: containerRef.current,
-        start: "top 75%",
-        end: "bottom center",
-        scrub: true,
-      },
-    });
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: containerRef.current,
+          start: "top 75%",
+          end: "bottom center",
+          scrub: true,
+        },
+      });
 
-    tl.to(words, {
-      color: "#4169E1",
-      stagger: 0.08,
-      ease: "none",
-    });
-  }, containerRef);
+      tl.to(words, {
+        color: "#000",
+        stagger: 0.08,
+        ease: "none",
+      });
+    }, containerRef);
 
-  return () => ctx.revert();
-}, []);
+    return () => ctx.revert();
+  }, []);
 
   return (
     <p
@@ -49,10 +46,7 @@ useEffect(() => {
       className={`text-4xl leading-relaxed font-medium ${className}`}
     >
       {text.split(" ").map((word, index) => (
-        <span
-          key={index}
-          className="word inline-block mr-2 transition-colors"
-        >
+        <span key={index} className="word inline-block mr-2 transition-colors">
           {word}
         </span>
       ))}
