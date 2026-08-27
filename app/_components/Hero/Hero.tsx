@@ -14,7 +14,7 @@ export default function Hero() {
           SOFTWARE ENGINEER • FRONTEND ADDICTIVE • PROBLEM SOLVER
         </p>
 
-        <h2 className="text-6xl sm:text-7xl lg:text-8xl font-normal tracking-tight text-neutral-900 leading-[1.05]">
+        <h2 className="text-5xl sm:text-7xl lg:text-8xl font-normal tracking-tight text-neutral-900 leading-[1.05]">
           Md. Najmus Sakib Nahid.
         </h2>
 

@@ -30,7 +30,7 @@ const educationData: EducationItem[] = [
 
 export default function Education() {
   return (
-    <section id="education" className="py-20">
+    <section id="education">
       <SectionHeader
         badge="EDUCATION"
         title="Academic"

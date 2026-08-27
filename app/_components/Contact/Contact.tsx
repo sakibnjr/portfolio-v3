@@ -4,7 +4,7 @@ import ContactForm from "@/app/_components/Contact/ContactForm";
 
 export default function Contact() {
   return (
-    <section id="contact" className="py-24">
+    <section id="contact">
       <SectionHeader
         badge="CONTACT"
         title="Let's build something"

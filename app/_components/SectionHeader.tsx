@@ -22,7 +22,7 @@ export default function SectionHeader({
       <p className="text-xs font-mono uppercase tracking-widest text-emerald-500 font-semibold">
         &#47;&#47; {cleanBadge}
       </p>
-      <h2 className="text-4xl sm:text-5xl font-bold tracking-tight text-neutral-900">
+      <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-neutral-900">
         {title} {highlightedTitle}
       </h2>
       <p className="text-neutral-500 text-sm sm:text-base max-w-xl leading-relaxed">

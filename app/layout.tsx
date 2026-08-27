@@ -29,7 +29,9 @@ export const metadata: Metadata = {
     "sakibnjr",
     "portfolio",
   ],
-  authors: [{ name: "Md. Najmus Sakib Nahid", url: "https://github.com/sakibnjr" }],
+  authors: [
+    { name: "Md. Najmus Sakib Nahid", url: "https://github.com/sakibnjr" },
+  ],
   creator: "Md. Najmus Sakib Nahid",
   openGraph: {
     type: "website",
@@ -59,7 +61,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="antialiased scroll-smooth">
-      <body className="w-4/5 mx-auto">
+      <body className="max-w-7xl md:w-4/5 mx-auto px-4 md:px-0">
         <Header />
         {children}
         <Footer />
