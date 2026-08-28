@@ -9,7 +9,7 @@ const socialLinks = [
 
 export default function ContactInfo() {
   return (
-    <div className="flex flex-col justify-between gap-12 lg:gap-14 max-w-xl h-full py-2">
+    <div className="flex flex-col justify-between gap-12 lg:gap-14 max-w-xl h-full">
       <div className="flex flex-col gap-6">
         <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-emerald-50 border border-emerald-200/80 text-xs font-mono text-emerald-800 w-fit shadow-2xs">
           <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />

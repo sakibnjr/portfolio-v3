@@ -4,7 +4,10 @@ import ProjectAccordion from "@/app/_components/Projects/ProjectAccordion";
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-20">
+    <section
+      id="projects"
+      className="py-16 sm:py-20 lg:py-24 scroll-mt-12 md:scroll-mt-16"
+    >
       <SectionHeader
         badge="PROJECTS"
         title="Things I've"

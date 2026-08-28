@@ -94,7 +94,10 @@ const certificationsData: CertificationItem[] = [
 
 export default function Certifications() {
   return (
-    <section id="certifications" className="py-20">
+    <section
+      id="certifications"
+      className="py-16 sm:py-20 lg:py-24 scroll-mt-12 md:scroll-mt-16"
+    >
       <SectionHeader
         badge="CERTIFICATIONS"
         title="Verified"

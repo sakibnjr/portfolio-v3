@@ -11,7 +11,7 @@ export default function SectionHeader({
   title,
   highlightedTitle,
   description,
-  className = "mb-16",
+  className = "mb-12 sm:mb-16",
 }: SectionHeaderProps) {
   const cleanBadge = badge.startsWith("//")
     ? badge.replace(/^\/\/\s*/, "")
@@ -25,9 +25,11 @@ export default function SectionHeader({
       <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-neutral-900">
         {title} {highlightedTitle}
       </h2>
-      <p className="text-neutral-500 text-sm sm:text-base max-w-xl leading-relaxed">
-        {description}
-      </p>
+      {description ? (
+        <p className="text-neutral-500 text-sm sm:text-base max-w-xl leading-relaxed">
+          {description}
+        </p>
+      ) : null}
     </div>
   );
 }

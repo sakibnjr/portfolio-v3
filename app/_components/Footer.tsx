@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="border-t border-neutral-200/80 py-10 mt-12">
+    <footer className="border-t border-neutral-200/80 py-10 sm:py-12">
       <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs sm:text-sm text-neutral-500">
         {/* Brand Logo */}
         <Link

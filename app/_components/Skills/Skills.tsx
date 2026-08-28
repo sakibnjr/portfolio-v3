@@ -8,7 +8,10 @@ import ToolsMatrixCard from "@/app/_components/Skills/ToolsMatrixCard";
 
 export default function Skills() {
   return (
-    <section id="skills">
+    <section
+      id="skills"
+      className="py-16 sm:py-20 lg:py-24 scroll-mt-12 md:scroll-mt-16"
+    >
       <SectionHeader
         badge="SKILLS"
         title="Technical"
