@@ -6,7 +6,7 @@ export default async function StreakCard() {
   const data = await getGitHubData("sakibnjr");
 
   return (
-    <div className="bg-[#121319] border border-neutral-800/80 rounded-[2rem] p-7 sm:p-8 flex flex-col justify-between text-white shadow-xl shadow-black/10">
+    <div className="h-full bg-[#121319] border border-neutral-800/80 rounded-[2rem] p-7 sm:p-8 flex flex-col justify-between text-white shadow-xl shadow-black/10">
       <div>
         <div className="flex items-center justify-between mb-6">
           <span className="text-xs font-mono text-orange-400/90 font-medium">LIVE // GITHUB</span>

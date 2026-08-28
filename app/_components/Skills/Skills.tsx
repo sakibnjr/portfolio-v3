@@ -19,22 +19,28 @@ export default function Skills() {
         description="Proficiency across the full stack — from pixels to infrastructure."
       />
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-5">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-4 lg:gap-5">
+        <div className="lg:col-span-7 flex flex-col">
+          <HeroCraftCard />
+        </div>
+
+        <div className="lg:col-span-5 flex flex-col">
+          <ToolsMatrixCard />
+        </div>
+
         <div className="lg:col-span-4 flex flex-col">
           <FrontendCard />
         </div>
 
-        <div className="lg:col-span-5 flex flex-col gap-5">
-          <HeroCraftCard />
+        <div className="lg:col-span-5 flex flex-col">
           <StreakCard />
         </div>
 
-        <div className="lg:col-span-3 flex flex-col gap-5">
-          <ToolsMatrixCard />
+        <div className="lg:col-span-3 flex flex-col">
           <WhatIBuildCard />
         </div>
 
-        <div className="md:col-span-2 lg:col-span-12">
+        <div className="md:col-span-2 lg:col-span-12 flex flex-col">
           <BackendCard />
         </div>
       </div>

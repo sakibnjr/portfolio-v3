@@ -61,7 +61,7 @@ const buildItems = [
 
 export default function WhatIBuildCard() {
   return (
-    <div className="bg-[#f0f9ff]/70 border border-sky-200/70 rounded-[2rem] p-7 sm:p-8 flex flex-col justify-between shadow-xs hover:shadow-md transition-all duration-200">
+    <div className="h-full bg-[#f0f9ff]/70 border border-sky-200/70 rounded-[2rem] p-7 sm:p-8 flex flex-col justify-between shadow-xs hover:shadow-md transition-all duration-200">
       <div>
         <div className="flex items-center justify-between mb-6">
           <span className="text-xs font-mono text-sky-700/80 font-medium">03 // SCOPE</span>

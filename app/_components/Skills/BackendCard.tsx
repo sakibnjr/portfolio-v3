@@ -43,7 +43,7 @@ const lanes = [
 
 export default function BackendCard() {
   return (
-    <div className="bg-[#f8f7ff] border border-purple-100/90 rounded-[2rem] p-7 sm:p-8 flex flex-col gap-6 shadow-xs hover:shadow-md hover:border-purple-200 transition-all duration-300">
+    <div className="h-full bg-[#f8f7ff] border border-purple-100/90 rounded-[2rem] p-7 sm:p-8 flex flex-col gap-6 shadow-xs hover:shadow-md hover:border-purple-200 transition-all duration-300">
       <div>
         <div className="flex items-center justify-between mb-6">
           <span className="text-xs font-mono text-purple-700/80 font-medium">02 // BACKEND</span>

@@ -1,19 +1,22 @@
-import { FaGitAlt, FaFigma, FaJava } from "react-icons/fa";
-import { TbBrandAdobeXd, TbBrandOpenai } from "react-icons/tb";
+import { FaGitAlt, FaFigma } from "react-icons/fa";
+import { TbBrandAdobeXd, TbBrandOpenai, TbBrandVscode } from "react-icons/tb";
 import {
   SiVercel,
   SiSupabase,
   SiPrisma,
   SiZod,
-  SiPython,
   SiGooglegemini,
   SiClaude,
   SiRailway,
   SiRender,
-  SiKotlin,
+  SiTypescript,
+  SiShadcnui,
+  SiPostman,
 } from "react-icons/si";
 
 const toolIcons = [
+  { name: "VS Code", icon: TbBrandVscode, color: "text-[#007ACC]" },
+  { name: "TypeScript", icon: SiTypescript, color: "text-[#3178C6]" },
   { name: "Git", icon: FaGitAlt, color: "text-[#F05032]" },
   { name: "Figma", icon: FaFigma, color: "text-[#F24E1E]" },
   { name: "Adobe XD", icon: TbBrandAdobeXd, color: "text-[#FF61F6]" },
@@ -26,14 +29,13 @@ const toolIcons = [
   { name: "Supabase", icon: SiSupabase, color: "text-[#3ECF8E]" },
   { name: "Prisma", icon: SiPrisma, color: "text-[#2D3748]" },
   { name: "Zod", icon: SiZod, color: "text-[#3E67B1]" },
-  { name: "Python", icon: SiPython, color: "text-[#3776AB]" },
-  { name: "Java", icon: FaJava, color: "text-[#E76F00]" },
-  { name: "Kotlin", icon: SiKotlin, color: "text-[#7F52FF]" },
+  { name: "shadcn/ui", icon: SiShadcnui, color: "text-neutral-900" },
+  { name: "Postman", icon: SiPostman, color: "text-[#FF6C37]" },
 ];
 
 export default function ToolsMatrixCard() {
   return (
-    <div className="bg-[#f8f9fe] border border-indigo-100/90 rounded-[2rem] p-7 sm:p-8 shadow-xs flex flex-col justify-between hover:shadow-md transition-all duration-200">
+    <div className="h-full bg-[#f8f9fe] border border-indigo-100/90 rounded-[2rem] p-7 sm:p-8 shadow-xs flex flex-col justify-between hover:shadow-md transition-all duration-200">
       <div>
         <div className="flex items-center justify-between mb-6">
           <span className="text-xs font-mono text-indigo-700/80 font-medium">04 // TOOLS</span>

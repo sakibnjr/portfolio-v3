@@ -1,6 +1,6 @@
 export default function HeroCraftCard() {
   return (
-    <div className="relative bg-gradient-to-br from-[#fff7ed] via-[#fef3c7]/50 to-[#fed7aa]/40 border border-amber-200/80 rounded-[2rem] p-7 sm:p-8 text-neutral-900 shadow-xs overflow-hidden flex flex-col justify-between group hover:shadow-md transition-all">
+    <div className="h-full relative bg-gradient-to-br from-[#fff7ed] via-[#fef3c7]/50 to-[#fed7aa]/40 border border-amber-200/80 rounded-[2rem] p-7 sm:p-8 text-neutral-900 shadow-xs overflow-hidden flex flex-col justify-between group hover:shadow-md transition-all">
       <div className="absolute -top-10 -right-10 w-36 h-36 bg-amber-300/20 rounded-full blur-2xl pointer-events-none" />
       <div className="absolute -bottom-8 -left-8 w-32 h-32 bg-orange-200/25 rounded-full blur-xl pointer-events-none" />
 
