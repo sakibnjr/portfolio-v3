@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { HiLocationMarker } from "react-icons/hi";
 import userImage from "@/public/Nahid.jpg";
 import SkillMarquee from "@/app/_components/Hero/SkillMarquee";
@@ -40,12 +41,21 @@ export default function Hero() {
           aria-label="Hero actions"
           className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2 w-full"
         >
-          <button className="w-full sm:w-auto bg-black hover:bg-neutral-800 text-white font-medium px-7 py-3.5 rounded-2xl transition-all cursor-pointer shadow-xs text-center">
+          <Link
+            href="#projects"
+            className="w-full sm:w-auto bg-black hover:bg-neutral-800 text-white font-medium px-7 py-3.5 rounded-2xl transition-all cursor-pointer shadow-xs text-center"
+          >
             Explore My Work
-          </button>
-          <button className="w-full sm:w-auto border border-neutral-300 hover:bg-neutral-50 text-neutral-800 font-medium px-7 py-3.5 rounded-2xl transition-all cursor-pointer text-center">
+          </Link>
+          <Link
+            href="/Sakib_Nahid_Resume.pdf"
+            download="Sakib_Nahid_Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full sm:w-auto border border-neutral-300 hover:bg-neutral-50 text-neutral-800 font-medium px-7 py-3.5 rounded-2xl transition-all cursor-pointer text-center"
+          >
             Download Resume
-          </button>
+          </Link>
         </nav>
       </div>
 

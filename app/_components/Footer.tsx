@@ -8,7 +8,7 @@ export default function Footer() {
           href="/"
           className="tracking-tight text-neutral-900 text-base hover:opacity-80 transition-opacity"
         >
-          sakibnjr<span className="text-emerald-500 font-mono">.dev</span>
+          sakibnjr<span className="text-emerald-500 font-mono">.tech</span>
         </Link>
 
         <p className="font-mono text-xs text-neutral-400 text-center">
