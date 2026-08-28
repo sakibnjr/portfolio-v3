@@ -1,34 +1,34 @@
-import { FaGitAlt, FaFigma } from "react-icons/fa";
+import { FaGitAlt, FaFigma, FaJava } from "react-icons/fa";
+import { TbBrandAdobeXd, TbBrandOpenai } from "react-icons/tb";
 import {
   SiVercel,
   SiSupabase,
   SiPrisma,
-  SiTrpc,
   SiZod,
-  SiVitest,
-  SiTestinglibrary,
-  SiTurborepo,
-  SiBun,
-  SiRust,
   SiPython,
-  SiGo,
+  SiGooglegemini,
+  SiClaude,
+  SiRailway,
+  SiRender,
+  SiKotlin,
 } from "react-icons/si";
 
 const toolIcons = [
   { name: "Git", icon: FaGitAlt, color: "text-[#F05032]" },
   { name: "Figma", icon: FaFigma, color: "text-[#F24E1E]" },
+  { name: "Adobe XD", icon: TbBrandAdobeXd, color: "text-[#FF61F6]" },
+  { name: "ChatGPT", icon: TbBrandOpenai, color: "text-[#10A37F]" },
+  { name: "Gemini", icon: SiGooglegemini, color: "text-[#4E82EE]" },
+  { name: "Claude", icon: SiClaude, color: "text-[#D97706]" },
   { name: "Vercel", icon: SiVercel, color: "text-neutral-900" },
+  { name: "Railway", icon: SiRailway, color: "text-neutral-800" },
+  { name: "Render", icon: SiRender, color: "text-[#46E3B7]" },
   { name: "Supabase", icon: SiSupabase, color: "text-[#3ECF8E]" },
   { name: "Prisma", icon: SiPrisma, color: "text-[#2D3748]" },
-  { name: "tRPC", icon: SiTrpc, color: "text-[#2596BE]" },
   { name: "Zod", icon: SiZod, color: "text-[#3E67B1]" },
-  { name: "Vitest", icon: SiVitest, color: "text-[#FCC72B]" },
-  { name: "Playwright", icon: SiTestinglibrary, color: "text-[#45ba4b]" },
-  { name: "Turborepo", icon: SiTurborepo, color: "text-[#EF4444]" },
-  { name: "Bun", icon: SiBun, color: "text-amber-700" },
-  { name: "Rust", icon: SiRust, color: "text-[#CE412B]" },
   { name: "Python", icon: SiPython, color: "text-[#3776AB]" },
-  { name: "Go", icon: SiGo, color: "text-[#00ADD8]" },
+  { name: "Java", icon: FaJava, color: "text-[#E76F00]" },
+  { name: "Kotlin", icon: SiKotlin, color: "text-[#7F52FF]" },
 ];
 
 export default function ToolsMatrixCard() {
@@ -47,7 +47,7 @@ export default function ToolsMatrixCard() {
         </p>
 
         <div className="grid grid-cols-4 gap-2">
-          {toolIcons.slice(0, 12).map((tool) => {
+          {toolIcons.map((tool) => {
             const Icon = tool.icon;
             return (
               <div

@@ -36,7 +36,7 @@ export default function MobileNav({ isOpen, onClose, navLinks, activeSection }: 
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
             transition={{ type: "spring", damping: 28, stiffness: 260 }}
-            className="fixed inset-y-0 right-0 w-full max-w-xs h-dvh bg-white p-6 shadow-2xl flex flex-col justify-between z-10"
+            className="fixed inset-y-0 right-0 w-full sm:max-w-xs h-dvh bg-white p-6 shadow-2xl flex flex-col justify-between z-10"
             aria-label="Mobile Navigation"
           >
             <div>

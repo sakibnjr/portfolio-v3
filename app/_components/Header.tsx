@@ -27,13 +27,19 @@ export default function Header() {
   }, [isOpen]);
 
   return (
-    <header className="sticky top-0 z-40 py-3 backdrop-blur-lg bg-white/60 transition-all">
-      <nav aria-label="Main Navigation" className="flex items-center justify-between">
-        <Link href="#home" aria-label="Go to homepage" className="text-xl font-bold tracking-tight">
+    <header className="fixed top-0 left-0 right-0 z-40 py-2 sm:py-4 transition-all">
+      <nav
+        aria-label="Main Navigation"
+        className="max-w-7xl md:w-4/5 mx-auto px-4 md:px-0 flex items-center justify-between"
+      >
+        <Link
+          href="#home"
+          aria-label="Go to homepage"
+          className="text-xl font-bold tracking-tight"
+        >
           SN
         </Link>
 
-        {/* Liquid Glass Navigation Pill Bar */}
         <ul className="hidden md:flex items-center gap-1 border border-neutral-200/70 p-1.5 rounded-2xl bg-white/60 backdrop-blur-xl shadow-[0_4px_20px_rgba(0,0,0,0.03),inset_0_1px_1px_rgba(255,255,255,0.9)]">
           {navLinks.map((link) => (
             <li key={link.href}>

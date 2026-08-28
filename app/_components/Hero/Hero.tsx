@@ -7,7 +7,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="grid grid-cols-1 lg:grid-cols-2 items-center justify-between gap-12 lg:gap-16 min-h-[calc(100vh-6rem)] py-12 sm:py-16 lg:py-20 scroll-mt-12 md:scroll-mt-16"
+      className="w-full grid grid-cols-1 lg:grid-cols-2 items-center justify-between gap-12 lg:gap-16 sm:py-8 lg:py-12 scroll-mt-12 md:scroll-mt-16"
     >
       <div className="flex flex-col gap-6 max-w-2xl overflow-hidden">
         <p className="text-xs sm:text-sm font-medium tracking-[0.2em] text-neutral-400 uppercase">

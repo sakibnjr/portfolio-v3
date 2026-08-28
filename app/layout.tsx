@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import "./globals.css";
-
-import Header from "@/app/_components/Header";
-import Footer from "@/app/_components/Footer";
 
 export const metadata: Metadata = {
   title: {
@@ -61,11 +59,25 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="antialiased scroll-smooth">
-      <body className="max-w-7xl md:w-4/5 mx-auto px-4 md:px-0">
-        <Header />
-        {children}
-        <Footer />
-      </body>
+      <head>
+        <Script
+          strategy="afterInteractive"
+          src="https://www.googletagmanager.com/gtag/js?id=G-ZMZQ4QCRQK"
+        />
+        <Script
+          id="google-analytics"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-ZMZQ4QCRQK');
+            `,
+          }}
+        />
+      </head>
+      <body>{children}</body>
     </html>
   );
 }
