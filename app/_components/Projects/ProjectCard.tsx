@@ -1,13 +1,24 @@
 import Link from "next/link";
-import { ProjectItem } from "@/app/_components/Projects/projectData";
+import { type Project } from "@/app/_components/Projects/ProjectAccordion";
 
 interface ProjectCardProps {
-  project: ProjectItem;
+  project: Project;
+  index: number;
   isActive: boolean;
   onSelect: () => void;
 }
 
-export default function ProjectCard({ project, isActive, onSelect }: ProjectCardProps) {
+export default function ProjectCard({
+  project,
+  index,
+  isActive,
+  onSelect,
+}: ProjectCardProps) {
+  const number = String(index + 1).padStart(2, "0");
+  const liveUrl = project.live_url || project.liveUrl || "#";
+  const githubUrl =
+    project.github_url || project.githubUrl || "https://github.com/sakibnjr";
+
   return (
     <div
       onClick={onSelect}
@@ -17,7 +28,7 @@ export default function ProjectCard({ project, isActive, onSelect }: ProjectCard
           : "md:flex-1 md:hover:border-neutral-700/80 md:opacity-75 md:hover:opacity-100 md:cursor-pointer"
       }`}
     >
-      <div className={`absolute inset-0 bg-gradient-to-b ${project.bgGradient}`} />
+      <div className="absolute inset-0 bg-gradient-to-b from-neutral-900/80 via-neutral-950/90 to-[#0c0d12]" />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-neutral-800/20 via-transparent to-black/80" />
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none" />
 
@@ -28,8 +39,8 @@ export default function ProjectCard({ project, isActive, onSelect }: ProjectCard
         }`}
       >
         <div className="flex items-center justify-between">
-          <span className={`text-xs font-mono font-semibold ${project.accentColor}`}>
-            {project.number}
+          <span className="text-xs font-mono font-semibold text-emerald-400">
+            {number}
           </span>
           <span className="text-[11px] font-mono font-medium px-3 py-1 rounded-full bg-emerald-950/80 border border-emerald-700/50 text-emerald-400">
             {project.category}
@@ -49,7 +60,7 @@ export default function ProjectCard({ project, isActive, onSelect }: ProjectCard
           </p>
 
           <div className="flex flex-wrap gap-1.5 pt-1">
-            {project.tags.map((tag) => (
+            {project.tags?.map((tag) => (
               <span
                 key={tag}
                 className="px-2.5 py-1 rounded-lg bg-neutral-900/90 border border-neutral-700/50 text-[11px] font-mono text-neutral-300"
@@ -61,7 +72,7 @@ export default function ProjectCard({ project, isActive, onSelect }: ProjectCard
 
           <div className="flex items-center gap-3 pt-2">
             <Link
-              href={project.liveUrl}
+              href={liveUrl}
               className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-neutral-950 text-xs font-semibold transition-colors"
               onClick={(e) => e.stopPropagation()}
             >
@@ -69,7 +80,7 @@ export default function ProjectCard({ project, isActive, onSelect }: ProjectCard
               <span>→</span>
             </Link>
             <Link
-              href={project.githubUrl}
+              href={githubUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-neutral-900/90 hover:bg-neutral-800 text-neutral-200 border border-neutral-700/70 text-xs font-medium transition-colors"
@@ -85,7 +96,7 @@ export default function ProjectCard({ project, isActive, onSelect }: ProjectCard
       {/* Collapsed Strip: Only on desktop when inactive */}
       {!isActive && (
         <div className="hidden md:flex relative z-10 h-full p-4 sm:p-6 flex-col justify-between items-center text-neutral-400">
-          <span className="text-xs font-mono font-medium">{project.number}</span>
+          <span className="text-xs font-mono font-medium">{number}</span>
           <div className="[writing-mode:vertical-rl] rotate-180 text-sm font-semibold tracking-wider text-neutral-300 uppercase whitespace-nowrap">
             {project.title}
           </div>

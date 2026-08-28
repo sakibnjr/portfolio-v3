@@ -1,6 +1,22 @@
+import { Suspense } from "react";
 import Link from "next/link";
+import { cookies } from "next/headers";
 import SectionHeader from "@/app/_components/SectionHeader";
 import ProjectAccordion from "@/app/_components/Projects/ProjectAccordion";
+import Loader from "@/app/_components/Loader";
+import { createClient } from "@/app/_utils/supabase/server";
+
+async function ProjectsList() {
+  const cookieStore = await cookies();
+  const supabase = createClient(cookieStore);
+
+  const { data: projects } = await supabase
+    .from("projects")
+    .select("*")
+    .order("display_order", { ascending: true, nullsFirst: false });
+
+  return <ProjectAccordion projects={projects} />;
+}
 
 export default function Projects() {
   return (
@@ -16,7 +32,15 @@ export default function Projects() {
       />
 
       <div className="flex flex-col gap-8">
-        <ProjectAccordion />
+        <Suspense
+          fallback={
+            <div className="min-h-[460px] md:h-[520px] rounded-[2rem] border border-neutral-800/80 bg-[#0d0f15] flex flex-col items-center justify-center gap-3">
+              <Loader size="lg" className="text-white/80" />
+            </div>
+          }
+        >
+          <ProjectsList />
+        </Suspense>
 
         <div className="flex justify-center pt-2">
           <Link
