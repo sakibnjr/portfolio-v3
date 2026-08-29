@@ -29,4 +29,4 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 **Md. Najmus Sakib Nahid**
 - GitHub: [@sakibnjr](https://github.com/sakibnjr)
-- Website: [sakibnahid.dev](https://sakibnahid.dev)
+- Website: [sakibnjr.tech](https://sakibnjr.tech)

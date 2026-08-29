@@ -2,7 +2,13 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import "./globals.css";
 
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL;
+
 export const metadata: Metadata = {
+  metadataBase: baseUrl ? new URL(baseUrl) : undefined,
+  alternates: {
+    canonical: "/",
+  },
   title: {
     template: "%s | Sakib Nahid",
     default: "Md. Najmus Sakib Nahid — Full Stack Software Engineer",
