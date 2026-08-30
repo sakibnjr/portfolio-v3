@@ -24,8 +24,8 @@ export default function ProjectCard({
       onClick={onSelect}
       className={`relative min-h-[460px] md:min-h-0 md:h-[520px] rounded-[2rem] overflow-hidden transition-all duration-500 ease-out select-none border border-neutral-800/80 bg-[#0d0f15] w-full ${
         isActive
-          ? "md:flex-[3.5] lg:flex-[4] shadow-2xl shadow-black/40"
-          : "md:flex-1 md:hover:border-neutral-700/80 md:opacity-75 md:hover:opacity-100 md:cursor-pointer"
+          ? "md:flex-[3.5] lg:flex-[4] shadow-2xl shadow-black/40 md:min-w-[320px] lg:min-w-[380px]"
+          : "md:flex-1 md:min-w-[64px] lg:min-w-[72px] md:hover:border-neutral-700/80 md:opacity-75 md:hover:opacity-100 md:cursor-pointer"
       }`}
     >
       <div className="absolute inset-0 bg-gradient-to-b from-neutral-900/80 via-neutral-950/90 to-[#0c0d12]" />
