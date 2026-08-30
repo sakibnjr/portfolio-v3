@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { type Project } from "@/app/_components/Projects/ProjectAccordion";
+import { type Project } from "@/app/_types";
 
 interface ProjectCardProps {
   project: Project;

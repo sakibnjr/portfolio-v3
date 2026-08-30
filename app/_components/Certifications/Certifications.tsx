@@ -1,13 +1,11 @@
 import { Suspense } from "react";
 import SectionHeader from "@/app/_components/SectionHeader";
 import CertificationCard from "@/app/_components/Certifications/CertificationCard";
-import { createClient } from "@/app/_utils/supabase/server";
-import { cookies } from "next/headers";
+import { createStaticClient } from "@/app/_utils/supabase/static";
 import Loader from "@/app/_components/Loader";
 
 async function CertificationsList() {
-  const cookieStore = await cookies();
-  const supabase = createClient(cookieStore);
+  const supabase = createStaticClient();
 
   const { data: certifications } = await supabase
     .from("certifications")
@@ -15,7 +13,7 @@ async function CertificationsList() {
     .order("display_order", { ascending: true, nullsFirst: false });
 
   return (
-    <div className="flex flex-col rounded-2xl overflow-hidden border border-neutral-200/70 bg-white">
+    <div className="flex flex-col rounded-2xl border border-neutral-200/70 bg-white divide-y divide-neutral-100 shadow-xs">
       {certifications?.map((item) => (
         <CertificationCard key={item.id} certification={item} />
       ))}

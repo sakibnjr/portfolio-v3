@@ -2,21 +2,9 @@
 
 import { useState } from "react";
 import ProjectCard from "@/app/_components/Projects/ProjectCard";
+import { type Project } from "@/app/_types";
 
-export interface Project {
-  id: string;
-  title: string;
-  category: string;
-  tagline: string;
-  description: string;
-  tags: string[];
-  live_url?: string;
-  liveUrl?: string;
-  github_url?: string;
-  githubUrl?: string;
-  display_order?: number;
-  created_at?: string;
-}
+export type { Project };
 
 interface ProjectAccordionProps {
   projects: Project[] | null;

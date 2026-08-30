@@ -20,9 +20,9 @@ export default function Hero() {
         </h2>
 
         <h1 className="text-lg sm:text-xl text-neutral-600 leading-relaxed font-normal">
-          CSE Graduate — Full Stack Developer building modern web apps with
-          React, Next.js &amp; Node.js. Focused on clean code, great UX, and
-          shipping products that matter.
+          CSE Graduate — Software Engineer building modern web apps with React,
+          Next.js &amp; Node.js. Focused on clean code, great UX, and shipping
+          products that matter.
         </h1>
 
         <p className="flex items-center gap-1.5 text-sm font-medium text-neutral-500">

@@ -1,6 +1,17 @@
 import type { Metadata } from "next";
 import Script from "next/script";
+import { Plus_Jakarta_Sans, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
+
+const plusJakartaSans = Plus_Jakarta_Sans({
+  variable: "--font-sans",
+  subsets: ["latin"],
+});
+
+const jetbrainsMono = JetBrains_Mono({
+  variable: "--font-mono",
+  subsets: ["latin"],
+});
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL;
 
@@ -10,11 +21,11 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   title: {
-    template: "%s | Sakib Nahid",
-    default: "Md. Najmus Sakib Nahid — Full Stack Software Engineer",
+    template: "%s | Md. Najmus Sakib Nahid",
+    default: "Md. Najmus Sakib Nahid — Software Engineer",
   },
   description:
-    "CSE Graduate — Full Stack Developer building modern web apps with React, Next.js & Node.js. Focused on clean code, great UX, and shipping products that matter.",
+    "CSE Graduate — Software Engineer building modern web apps with React, Next.js & Node.js. Focused on clean code, great UX, and shipping products that matter.",
   keywords: [
     "Sakib Nahid",
     "Md Najmus Sakib Nahid",
@@ -52,6 +63,10 @@ export const metadata: Metadata = {
       "CSE Graduate — Full Stack Developer building modern web apps with React, Next.js & Node.js.",
     creator: "@sakibnjr",
   },
+  icons: {
+    icon: [{ url: "/favicon.png", type: "image/png" }],
+    apple: [{ url: "/favicon.png", type: "image/png" }],
+  },
   robots: {
     index: true,
     follow: true,
@@ -64,7 +79,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="antialiased scroll-smooth">
+    <html
+      lang="en"
+      className={`${plusJakartaSans.variable} ${jetbrainsMono.variable} font-sans antialiased scroll-smooth`}
+    >
       <head>
         <Script
           strategy="afterInteractive"
@@ -83,7 +101,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body>{children}</body>
+      <body className="font-sans antialiased">{children}</body>
     </html>
   );
 }

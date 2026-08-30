@@ -29,7 +29,7 @@ export default function ContactInfo() {
           <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
           <span className="font-semibold">Available for new projects</span>
           <span className="text-neutral-400">·</span>
-          <span className="text-neutral-500 font-medium">EST / Global</span>
+          <span className="text-neutral-500 font-medium">BST (UTC+6) / Global</span>
         </div>
 
         <p className="text-neutral-600 text-base sm:text-lg leading-relaxed max-w-lg">

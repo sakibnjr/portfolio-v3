@@ -1,14 +1,12 @@
 import { Suspense } from "react";
 import Link from "next/link";
-import { cookies } from "next/headers";
 import SectionHeader from "@/app/_components/SectionHeader";
 import ProjectAccordion from "@/app/_components/Projects/ProjectAccordion";
 import Loader from "@/app/_components/Loader";
-import { createClient } from "@/app/_utils/supabase/server";
+import { createStaticClient } from "@/app/_utils/supabase/static";
 
 async function ProjectsList() {
-  const cookieStore = await cookies();
-  const supabase = createClient(cookieStore);
+  const supabase = createStaticClient();
 
   const { data: projects } = await supabase
     .from("projects")

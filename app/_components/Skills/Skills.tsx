@@ -14,9 +14,9 @@ export default function Skills() {
     >
       <SectionHeader
         badge="SKILLS"
-        title="Technical"
-        highlightedTitle="Arsenal"
-        description="Proficiency across the full stack — from pixels to infrastructure."
+        title="Skills &"
+        highlightedTitle="Technologies"
+        description="Technologies, frameworks, and tools I work with across frontend, backend, and DevOps."
       />
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-4 lg:gap-5">

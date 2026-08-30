@@ -2,11 +2,14 @@ import Header from "@/app/_components/Header";
 import Hero from "@/app/_components/Hero/Hero";
 import Education from "@/app/_components/Education/Education";
 import Certifications from "@/app/_components/Certifications/Certifications";
+import Publications from "@/app/_components/Publications/Publications";
 import Skills from "@/app/_components/Skills/Skills";
 import Projects from "@/app/_components/Projects/Projects";
 import Contact from "@/app/_components/Contact/Contact";
 import Footer from "@/app/_components/Footer";
 import BackToTop from "@/app/_components/BackToTop";
+
+export const revalidate = 60;
 
 export default function Home() {
   return (
@@ -17,9 +20,9 @@ export default function Home() {
           <Hero />
         </div>
       </div>
-
       <Education />
       <Certifications />
+      <Publications />
       <Skills />
       <Projects />
       <Contact />
