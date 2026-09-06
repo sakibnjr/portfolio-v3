@@ -1,7 +1,3 @@
-"use client";
-
-import { motion } from "motion/react";
-
 interface Skill {
   name: string;
   dotColor: string;
@@ -20,15 +16,7 @@ export default function SkillMarquee() {
 
   return (
     <div className="relative w-full overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_5%,black_95%,transparent)]">
-      <motion.ul
-        className="flex items-center gap-2.5 w-max"
-        animate={{ x: ["0%", "-50%"] }}
-        transition={{
-          repeat: Infinity,
-          ease: "linear",
-          duration: 18,
-        }}
-      >
+      <ul className="flex items-center gap-2.5 w-max animate-marquee">
         {marqueeSkills.map((skill, index) => (
           <li
             key={`${skill.name}-${index}`}
@@ -38,7 +26,7 @@ export default function SkillMarquee() {
             {skill.name}
           </li>
         ))}
-      </motion.ul>
+      </ul>
     </div>
   );
 }
