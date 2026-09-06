@@ -63,13 +63,13 @@ export const metadata: Metadata = {
       "CSE Graduate — Full Stack Developer building modern web apps with React, Next.js & Node.js.",
     creator: "@sakibnjr",
   },
-  icons: {
-    icon: [{ url: "/favicon.png", type: "image/png" }],
-    apple: [{ url: "/favicon.png", type: "image/png" }],
-  },
   robots: {
     index: true,
     follow: true,
+  },
+  icons: {
+    icon: "/icon.png",
+    apple: "/icon.png",
   },
 };
 
@@ -84,6 +84,10 @@ export default function RootLayout({
       className={`${plusJakartaSans.variable} ${jetbrainsMono.variable} font-sans antialiased scroll-smooth`}
     >
       <head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" href="/icon.png" type="image/png" sizes="any" />
+        <link rel="apple-touch-icon" href="/icon.png" type="image/png" />
+
         <Script
           strategy="afterInteractive"
           src="https://www.googletagmanager.com/gtag/js?id=G-ZMZQ4QCRQK"
