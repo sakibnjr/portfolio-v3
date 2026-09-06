@@ -4,6 +4,9 @@ import {
   LuAward,
 } from "react-icons/lu";
 import { type EducationItem } from "@/app/_types";
+import bachelorImg from "@/public/bachelor.webp";
+import hscImg from "@/public/hsc.webp";
+import sscImg from "@/public/ssc.webp";
 
 export type { EducationItem };
 
@@ -19,7 +22,7 @@ export const educationData: EducationItem[] = [
     status: "Graduated",
     featured: true,
     icon: LuGraduationCap,
-    image: "/bachelor.webp",
+    image: bachelorImg,
   },
   {
     id: "hsc",
@@ -31,7 +34,7 @@ export const educationData: EducationItem[] = [
     gpa: "GPA 4.83 / 5.00",
     status: "Science",
     icon: LuSchool,
-    image: "/hsc.webp",
+    image: hscImg,
   },
   {
     id: "ssc",
@@ -43,6 +46,6 @@ export const educationData: EducationItem[] = [
     gpa: "GPA 5.00 / 5.00",
     status: "Science",
     icon: LuAward,
-    image: "/ssc.webp",
+    image: sscImg,
   },
 ];

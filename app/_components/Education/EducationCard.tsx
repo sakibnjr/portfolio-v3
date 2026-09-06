@@ -50,11 +50,10 @@ export default function EducationCard({ item }: EducationCardProps) {
           <Image
             src={item.image}
             alt={`${item.institution} campus`}
-            blurDataURL={item.image}
-            placeholder="blur"
             fill
+            placeholder="blur"
             priority
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 400px"
+            sizes="(max-width: 640px) 92vw, (max-width: 1024px) 33vw, 380px"
             className="object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
           />
 

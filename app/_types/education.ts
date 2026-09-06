@@ -1,4 +1,6 @@
 import type { IconType } from "react-icons";
+import type { StaticImageData } from "next/image";
+
 
 export interface EducationItem {
   id: string;
@@ -11,5 +13,5 @@ export interface EducationItem {
   status?: string;
   featured?: boolean;
   icon: IconType;
-  image?: string;
+  image?: string | StaticImageData;
 }
