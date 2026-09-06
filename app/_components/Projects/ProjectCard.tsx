@@ -52,7 +52,9 @@ export default function ProjectCard({
             <h3 className="text-2xl sm:text-3xl font-bold tracking-tight text-white mb-1">
               {project.title}
             </h3>
-            <p className="text-xs font-mono text-neutral-400">{project.tagline}</p>
+            <p className="text-xs font-mono text-neutral-400">
+              {project.tagline}
+            </p>
           </div>
 
           <p className="text-xs sm:text-sm text-neutral-300 leading-relaxed line-clamp-3">
@@ -73,6 +75,7 @@ export default function ProjectCard({
           <div className="flex items-center gap-3 pt-2">
             <Link
               href={liveUrl}
+              target="_blank"
               className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-neutral-950 text-xs font-semibold transition-colors"
               onClick={(e) => e.stopPropagation()}
             >

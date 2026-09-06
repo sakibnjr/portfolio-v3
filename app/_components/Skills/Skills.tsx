@@ -13,10 +13,9 @@ export default function Skills() {
       className="py-16 sm:py-20 lg:py-24 scroll-mt-12 md:scroll-mt-16"
     >
       <SectionHeader
-        badge="SKILLS"
         title="Skills &"
         highlightedTitle="Technologies"
-        description="Technologies, frameworks, and tools I work with across frontend, backend, and DevOps."
+        description="The programming languages, frameworks, and tools I use to build software."
       />
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-4 lg:gap-5">

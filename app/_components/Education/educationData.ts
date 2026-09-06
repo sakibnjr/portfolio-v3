@@ -19,7 +19,7 @@ export const educationData: EducationItem[] = [
     status: "Graduated",
     featured: true,
     icon: LuGraduationCap,
-    image: "/bachelor.jpg",
+    image: "/bachelor.webp",
   },
   {
     id: "hsc",
@@ -31,7 +31,7 @@ export const educationData: EducationItem[] = [
     gpa: "GPA 4.83 / 5.00",
     status: "Science",
     icon: LuSchool,
-    image: "/hsc.jpg",
+    image: "/hsc.webp",
   },
   {
     id: "ssc",
@@ -43,6 +43,6 @@ export const educationData: EducationItem[] = [
     gpa: "GPA 5.00 / 5.00",
     status: "Science",
     icon: LuAward,
-    image: "/ssc.jpg",
+    image: "/ssc.webp",
   },
 ];

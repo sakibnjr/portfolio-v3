@@ -23,8 +23,8 @@ export default function Home() {
       <Education />
       <Certifications />
       <Publications />
-      <Skills />
       <Projects />
+      <Skills />
       <Contact />
       <Footer />
       <BackToTop />

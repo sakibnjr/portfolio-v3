@@ -9,10 +9,9 @@ export default function Publications() {
       className="py-16 sm:py-20 lg:py-24 scroll-mt-12 md:scroll-mt-16"
     >
       <SectionHeader
-        badge="PUBLICATIONS"
         title="Research &"
         highlightedTitle="Publications"
-        description="Scientific research contributions in deep learning, medical imaging, and explainable artificial intelligence (XAI)."
+        description="Research papers and articles exploring artificial intelligence and deep learning."
       />
 
       <div className="flex flex-col gap-6">

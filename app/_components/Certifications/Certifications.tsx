@@ -28,10 +28,9 @@ export default function Certifications() {
       className="py-16 sm:py-20 lg:py-24 scroll-mt-12 md:scroll-mt-16"
     >
       <SectionHeader
-        badge="CERTIFICATIONS"
         title="Verified"
         highlightedTitle="Credentials"
-        description="Industry certifications validating expertise in cloud platforms, DevOps, and modern development."
+        description="Courses and certifications I completed to learn new skills and stay sharp."
       />
 
       <Suspense

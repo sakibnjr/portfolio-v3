@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { HiLocationMarker } from "react-icons/hi";
-import userImage from "@/public/Nahid.jpg";
+import userImage from "@/public/Nahid.webp";
 import SkillMarquee from "@/app/_components/Hero/SkillMarquee";
 
 export default function Hero() {
@@ -48,8 +48,8 @@ export default function Hero() {
             Explore My Work
           </Link>
           <Link
-            href="/Sakib_Nahid_Resume.pdf"
-            download="Sakib_Nahid_Resume.pdf"
+            href="/Sakib_Nahid.pdf"
+            download="Sakib_Nahid.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="w-full sm:w-auto border border-neutral-300 hover:bg-neutral-50 text-neutral-800 font-medium px-7 py-3.5 rounded-2xl transition-all cursor-pointer text-center"

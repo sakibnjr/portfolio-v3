@@ -9,9 +9,9 @@ export default function Contact() {
       className="py-16 sm:py-20 lg:py-24 scroll-mt-12 md:scroll-mt-16"
     >
       <SectionHeader
-        badge="CONTACT"
         title="Let's build something"
-        highlightedTitle="great together"
+        highlightedTitle="great"
+        suffix="together"
         description="Have a project in mind, an opportunity, or just want to connect? Let's talk."
       />
 

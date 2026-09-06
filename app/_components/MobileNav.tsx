@@ -14,9 +14,18 @@ interface MobileNavProps {
   onClose: () => void;
   navLinks: NavLink[];
   activeSection: string;
+  homeHref?: string;
+  hireMeHref?: string;
 }
 
-export default function MobileNav({ isOpen, onClose, navLinks, activeSection }: MobileNavProps) {
+export default function MobileNav({
+  isOpen,
+  onClose,
+  navLinks,
+  activeSection,
+  homeHref = "#home",
+  hireMeHref = "#contact",
+}: MobileNavProps) {
   return (
     <AnimatePresence>
       {isOpen && (
@@ -41,7 +50,13 @@ export default function MobileNav({ isOpen, onClose, navLinks, activeSection }: 
           >
             <div>
               <header className="flex items-center justify-between pb-6 border-b border-gray-100">
-                <Link href="#home" onClick={onClose} className="text-xl font-bold tracking-tight">SN</Link>
+                <Link
+                  href={homeHref}
+                  onClick={onClose}
+                  className="text-xl font-bold tracking-tight"
+                >
+                  SN
+                </Link>
                 <button
                   type="button"
                   onClick={onClose}
@@ -62,10 +77,12 @@ export default function MobileNav({ isOpen, onClose, navLinks, activeSection }: 
                       transition={{ delay: 0.05 * idx, duration: 0.2 }}
                     >
                       <Link
-                        href={`#${link.href}`}
+                        href={link.href}
                         onClick={onClose}
                         className={`flex items-center px-4 py-3 rounded-xl text-base font-medium transition-all ${
-                          activeSection === link.href ? "bg-black text-white" : "text-gray-600 hover:bg-gray-100 hover:text-black"
+                          activeSection === link.href
+                            ? "bg-black text-white"
+                            : "text-gray-600 hover:bg-gray-100 hover:text-black"
                         }`}
                       >
                         {link.label}
@@ -83,7 +100,7 @@ export default function MobileNav({ isOpen, onClose, navLinks, activeSection }: 
               className="pt-6 border-t border-gray-100"
             >
               <Link
-                href="#contact"
+                href={hireMeHref}
                 onClick={onClose}
                 className="flex items-center justify-center w-full bg-black text-white px-4 py-3 rounded-xl text-base font-medium hover:bg-gray-800 transition-colors shadow-sm"
               >

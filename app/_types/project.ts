@@ -10,5 +10,6 @@ export interface Project {
   github_url?: string;
   githubUrl?: string;
   display_order?: number;
+  featured?: boolean | null;
   created_at?: string;
 }

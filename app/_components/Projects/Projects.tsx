@@ -1,5 +1,6 @@
 import { Suspense } from "react";
 import Link from "next/link";
+import { HiArrowRight } from "react-icons/hi2";
 import SectionHeader from "@/app/_components/SectionHeader";
 import ProjectAccordion from "@/app/_components/Projects/ProjectAccordion";
 import Loader from "@/app/_components/Loader";
@@ -11,6 +12,7 @@ async function ProjectsList() {
   const { data: projects } = await supabase
     .from("projects")
     .select("*")
+    .eq("featured", true)
     .order("display_order", { ascending: true, nullsFirst: false });
 
   return <ProjectAccordion projects={projects} />;
@@ -27,10 +29,9 @@ export default function Projects() {
           fallback={
             <div>
               <SectionHeader
-                badge="PROJECTS"
                 title="Things I've"
                 highlightedTitle="Built"
-                description="A selection of production products, open source tools, and side projects."
+                description="A selection of web apps, open-source tools, and side projects I have built."
               />
               <div className="min-h-[460px] md:h-[520px] rounded-[2rem] border border-neutral-800/80 bg-[#0d0f15] flex flex-col items-center justify-center gap-3">
                 <Loader size="lg" className="text-white/80" />
@@ -43,13 +44,11 @@ export default function Projects() {
 
         <div className="flex justify-center pt-2">
           <Link
-            href="https://github.com/sakibnjr"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 px-6 py-2.5 rounded-full border border-neutral-300 hover:border-neutral-400 bg-white hover:bg-neutral-50 text-neutral-800 text-sm font-medium transition-all shadow-xs"
+            href="/projects"
+            className="group inline-flex items-center gap-2 px-6 py-2.5 rounded-full border border-neutral-300 hover:border-neutral-900 bg-white hover:bg-neutral-900 text-neutral-800 hover:text-white text-sm font-medium transition-all duration-200 shadow-xs cursor-pointer"
           >
-            <span>View all on GitHub</span>
-            <span>↗</span>
+            <span>Show More</span>
+            <HiArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />
           </Link>
         </div>
       </div>
