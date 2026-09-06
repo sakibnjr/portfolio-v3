@@ -36,7 +36,7 @@ export default async function ProjectsPage() {
   return (
     <main className="max-w-7xl md:w-4/5 mx-auto px-4 md:px-0 min-h-screen flex flex-col justify-between">
       <Header />
-      <div className="pt-24 sm:pt-28 pb-16 sm:pb-20 flex-1">
+      <div className="pt-16 sm:pt-20 md:pt-24 pb-12 sm:pb-16 flex-1">
         <ProjectsArchive projects={projects} />
       </div>
       <Footer />

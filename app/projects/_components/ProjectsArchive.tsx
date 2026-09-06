@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { type Project } from "@/app/_types";
 import ProjectsHeader from "./ProjectsHeader";
 import ProjectsFilterBar, { type TabType } from "./ProjectsFilterBar";
@@ -15,6 +15,10 @@ export default function ProjectsArchive({ projects }: ProjectsArchiveProps) {
   const [activeTab, setActiveTab] = useState<TabType>("other");
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
   const [searchQuery, setSearchQuery] = useState("");
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+  }, []);
 
   const featuredProjects = useMemo(
     () => projects.filter((p) => p.featured === true),
@@ -61,21 +65,20 @@ export default function ProjectsArchive({ projects }: ProjectsArchiveProps) {
   }, [tabProjects, selectedCategory, searchQuery]);
 
   const resetFilters = () => {
-    setActiveTab("other");
     setSelectedCategory("all");
     setSearchQuery("");
   };
 
   return (
-    <div className="flex flex-col gap-10">
+    <div className="flex flex-col gap-6 sm:gap-8">
       <ProjectsHeader />
 
       <ProjectsFilterBar
         activeTab={activeTab}
         onTabChange={setActiveTab}
         otherCount={otherProjects.length}
-        allCount={projects.length}
         featuredCount={featuredProjects.length}
+        allCount={projects.length}
         searchQuery={searchQuery}
         onSearchChange={setSearchQuery}
         categories={categories}

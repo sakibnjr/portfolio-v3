@@ -3,8 +3,6 @@ import Link from "next/link";
 import { LuArrowUpRight } from "react-icons/lu";
 import { type CertificationItem } from "@/app/_types";
 
-export type { CertificationItem };
-
 interface CertificationCardProps {
   certification: CertificationItem;
 }

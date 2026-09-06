@@ -8,8 +8,6 @@ import bachelorImg from "@/public/bachelor.webp";
 import hscImg from "@/public/hsc.webp";
 import sscImg from "@/public/ssc.webp";
 
-export type { EducationItem };
-
 export const educationData: EducationItem[] = [
   {
     id: "bsc",

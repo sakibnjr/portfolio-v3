@@ -83,7 +83,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${plusJakartaSans.variable} ${jetbrainsMono.variable} font-sans antialiased scroll-smooth`}
+      className={`${plusJakartaSans.variable} ${jetbrainsMono.variable} scroll-smooth`}
     >
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />

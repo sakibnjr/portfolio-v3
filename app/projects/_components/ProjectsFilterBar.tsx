@@ -1,13 +1,13 @@
 import { HiMagnifyingGlass, HiXMark } from "react-icons/hi2";
 
-export type TabType = "other" | "all" | "featured";
+export type TabType = "other" | "featured" | "all";
 
 interface ProjectsFilterBarProps {
   activeTab: TabType;
   onTabChange: (tab: TabType) => void;
   otherCount: number;
-  allCount: number;
   featuredCount: number;
+  allCount: number;
   searchQuery: string;
   onSearchChange: (query: string) => void;
   categories: string[];
@@ -22,8 +22,8 @@ export default function ProjectsFilterBar({
   activeTab,
   onTabChange,
   otherCount,
-  allCount,
   featuredCount,
+  allCount,
   searchQuery,
   onSearchChange,
   categories,
@@ -36,61 +36,62 @@ export default function ProjectsFilterBar({
   const hasActiveFilters = !!searchQuery || selectedCategory !== "all";
 
   return (
-    <div className="flex flex-col gap-4">
-      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+    <div className="flex flex-col gap-3">
+      {/* Top Controls: Tabs and Search */}
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
         {/* Tab Selector */}
-        <div className="inline-flex p-1 rounded-2xl bg-neutral-100 border border-neutral-200/80 self-start">
+        <div className="inline-flex p-1 rounded-xl bg-neutral-100 border border-neutral-200/80 self-start">
           <button
             type="button"
             onClick={() => onTabChange("other")}
-            className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-medium transition-all cursor-pointer ${
+            className={`px-3 sm:px-3.5 py-1.5 rounded-lg text-xs sm:text-sm font-medium transition-all cursor-pointer ${
               activeTab === "other"
-                ? "bg-white text-neutral-900 shadow-xs"
+                ? "bg-white text-neutral-900 shadow-2xs font-semibold"
                 : "text-neutral-500 hover:text-neutral-900"
             }`}
           >
-            Other Projects ({otherCount})
-          </button>
-          <button
-            type="button"
-            onClick={() => onTabChange("all")}
-            className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-medium transition-all cursor-pointer ${
-              activeTab === "all"
-                ? "bg-white text-neutral-900 shadow-xs"
-                : "text-neutral-500 hover:text-neutral-900"
-            }`}
-          >
-            All Projects ({allCount})
+            Other ({otherCount})
           </button>
           <button
             type="button"
             onClick={() => onTabChange("featured")}
-            className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-medium transition-all cursor-pointer ${
+            className={`px-3 sm:px-3.5 py-1.5 rounded-lg text-xs sm:text-sm font-medium transition-all cursor-pointer ${
               activeTab === "featured"
-                ? "bg-white text-neutral-900 shadow-xs"
+                ? "bg-white text-neutral-900 shadow-2xs font-semibold"
                 : "text-neutral-500 hover:text-neutral-900"
             }`}
           >
             Featured ({featuredCount})
           </button>
+          <button
+            type="button"
+            onClick={() => onTabChange("all")}
+            className={`px-3 sm:px-3.5 py-1.5 rounded-lg text-xs sm:text-sm font-medium transition-all cursor-pointer ${
+              activeTab === "all"
+                ? "bg-white text-neutral-900 shadow-2xs font-semibold"
+                : "text-neutral-500 hover:text-neutral-900"
+            }`}
+          >
+            All ({allCount})
+          </button>
         </div>
 
         {/* Search Box */}
-        <div className="relative w-full md:w-80">
+        <div className="relative w-full sm:w-72">
           <HiMagnifyingGlass className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-neutral-400 pointer-events-none" />
           <input
             type="text"
             value={searchQuery}
             onChange={(e) => onSearchChange(e.target.value)}
-            placeholder="Search by title, stack, keyword..."
-            className="w-full pl-10 pr-9 py-2 text-xs sm:text-sm bg-white rounded-xl border border-neutral-200/90 focus:outline-none focus:border-neutral-400 focus:ring-2 focus:ring-neutral-200/50 placeholder:text-neutral-400 transition-all shadow-2xs"
+            placeholder="Search title, stack, keyword..."
+            className="w-full pl-9 pr-8 py-1.5 text-xs sm:text-sm bg-white rounded-xl border border-neutral-200/90 focus:outline-none focus:border-neutral-400 focus:ring-2 focus:ring-neutral-200/50 placeholder:text-neutral-400 transition-all shadow-2xs"
           />
           {searchQuery && (
             <button
               type="button"
               onClick={() => onSearchChange("")}
               aria-label="Clear search"
-              className="absolute right-3 top-1/2 -translate-y-1/2 text-neutral-400 hover:text-neutral-700 p-0.5 cursor-pointer"
+              className="absolute right-2.5 top-1/2 -translate-y-1/2 text-neutral-400 hover:text-neutral-700 p-0.5 cursor-pointer"
             >
               <HiXMark className="w-4 h-4" />
             </button>
@@ -98,18 +99,18 @@ export default function ProjectsFilterBar({
         </div>
       </div>
 
-      {/* Categories Chips */}
+      {/* Category Chips */}
       {categories.length > 0 && (
-        <div className="flex items-center gap-1.5 overflow-x-auto pb-1 text-xs no-scrollbar">
-          <span className="text-neutral-400 font-mono text-[11px] mr-1 select-none">
+        <div className="flex items-center gap-1.5 overflow-x-auto py-1 text-xs no-scrollbar">
+          <span className="text-neutral-400 font-mono text-[11px] mr-1 select-none shrink-0">
             Category:
           </span>
           <button
             type="button"
             onClick={() => onCategoryChange("all")}
-            className={`px-3 py-1 rounded-lg text-xs font-mono transition-all cursor-pointer whitespace-nowrap ${
+            className={`px-2.5 py-1 rounded-lg text-xs font-mono transition-all cursor-pointer whitespace-nowrap shrink-0 ${
               selectedCategory === "all"
-                ? "bg-neutral-900 text-white"
+                ? "bg-neutral-900 text-white shadow-2xs font-semibold"
                 : "bg-neutral-100 text-neutral-600 hover:bg-neutral-200/80"
             }`}
           >
@@ -120,9 +121,9 @@ export default function ProjectsFilterBar({
               key={cat}
               type="button"
               onClick={() => onCategoryChange(cat)}
-              className={`px-3 py-1 rounded-lg text-xs font-mono transition-all cursor-pointer whitespace-nowrap ${
+              className={`px-2.5 py-1 rounded-lg text-xs font-mono transition-all cursor-pointer whitespace-nowrap shrink-0 ${
                 selectedCategory === cat
-                  ? "bg-neutral-900 text-white"
+                  ? "bg-neutral-900 text-white shadow-2xs font-semibold"
                   : "bg-neutral-100 text-neutral-600 hover:bg-neutral-200/80"
               }`}
             >
@@ -133,7 +134,7 @@ export default function ProjectsFilterBar({
       )}
 
       {/* Results Indicator */}
-      <div className="flex items-center justify-between text-xs font-mono text-neutral-400">
+      <div className="flex items-center justify-between text-xs font-mono text-neutral-400 px-0.5">
         <span>
           Showing {totalFiltered} of {totalInTab} projects
         </span>

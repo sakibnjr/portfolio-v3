@@ -3,9 +3,9 @@ import { HiArrowLeft } from "react-icons/hi2";
 
 export default function ProjectsHeader() {
   return (
-    <div className="flex flex-col gap-8">
+    <div className="flex flex-col gap-5 sm:gap-6">
       {/* Top Banner / Breadcrumb */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-4 pb-2 border-b border-neutral-200/80">
+      <div className="flex items-center justify-between gap-3 py-2 border-b border-neutral-200/80">
         <Link
           href="/"
           className="inline-flex items-center gap-2 text-xs sm:text-sm font-medium text-neutral-500 hover:text-neutral-900 transition-colors group"

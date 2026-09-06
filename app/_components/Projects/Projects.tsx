@@ -45,6 +45,7 @@ export default function Projects() {
         <div className="flex justify-center pt-2">
           <Link
             href="/projects"
+            scroll={false}
             className="group inline-flex items-center gap-2 px-6 py-2.5 rounded-full border border-neutral-300 hover:border-neutral-900 bg-white hover:bg-neutral-900 text-neutral-800 hover:text-white text-sm font-medium transition-all duration-200 shadow-xs cursor-pointer"
           >
             <span>Show More</span>

@@ -5,8 +5,6 @@ import ProjectCard from "@/app/_components/Projects/ProjectCard";
 import SectionHeader from "@/app/_components/SectionHeader";
 import { type Project } from "@/app/_types";
 
-export type { Project };
-
 interface ProjectAccordionProps {
   projects: Project[] | null;
 }
