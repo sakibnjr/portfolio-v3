@@ -13,10 +13,10 @@ export const revalidate = 60;
 
 export default function Home() {
   return (
-    <main className="max-w-7xl md:w-4/5 mx-auto px-4 md:px-0">
-      <div className="min-h-screen flex flex-col justify-between">
+    <main className="w-full">
+      <div className="w-full min-h-screen flex flex-col justify-between border-b border-neutral-300">
         <Header />
-        <div className="flex-1 flex items-center">
+        <div className="flex-1 flex items-center max-w-7xl md:w-4/5 mx-auto px-4 md:px-0 w-full">
           <Hero />
         </div>
       </div>

@@ -3,7 +3,11 @@
 import { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
 
-export default function ContactForm() {
+interface ContactFormProps {
+  onClose?: () => void;
+}
+
+export default function ContactForm({ onClose }: ContactFormProps = {}) {
   const formRef = useRef<HTMLFormElement>(null);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -45,13 +49,26 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="bg-[#121319] border border-neutral-800/80 rounded-[2rem] p-8 sm:p-10 text-white shadow-2xl shadow-black/30 flex flex-col justify-between min-h-[560px] sm:min-h-[600px]">
+    <div className="bg-[#121319] border border-neutral-800/80 rounded-[2rem] p-6 sm:p-8 md:p-10 text-white shadow-2xl shadow-black/30 flex flex-col justify-between w-full">
       <div>
         <div className="flex items-center justify-between mb-8 pb-4 border-b border-neutral-800/80 text-xs font-mono">
           <span className="text-neutral-500 uppercase tracking-wider">NEW MESSAGE</span>
-          <div className="flex items-center gap-2 text-emerald-400 font-medium">
-            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-            <span>COMPOSE</span>
+          <div className="flex items-center gap-3">
+            <div className="flex items-center gap-2 text-emerald-400 font-medium">
+              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+              <span>COMPOSE</span>
+            </div>
+            {onClose && (
+              <button
+                type="button"
+                onClick={onClose}
+                aria-label="Close contact form"
+                className="inline-flex items-center gap-1.5 text-neutral-400 hover:text-white px-2.5 py-1 rounded-lg hover:bg-neutral-800/90 transition-colors cursor-pointer text-xs"
+              >
+                <span>✕</span>
+                <span>Close</span>
+              </button>
+            )}
           </div>
         </div>
 

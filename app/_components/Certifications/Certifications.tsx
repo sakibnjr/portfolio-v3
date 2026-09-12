@@ -25,23 +25,25 @@ export default function Certifications() {
   return (
     <section
       id="certifications"
-      className="py-16 sm:py-20 lg:py-24 scroll-mt-12 md:scroll-mt-16"
+      className="w-full py-16 sm:py-20 lg:py-24 scroll-mt-12 md:scroll-mt-16 border-b border-neutral-300"
     >
-      <SectionHeader
-        title="Verified"
-        highlightedTitle="Credentials"
-        description="Courses and certifications I completed to learn new skills and stay sharp."
-      />
+      <div className="max-w-7xl md:w-4/5 mx-auto px-4 md:px-0">
+        <SectionHeader
+          title="Verified"
+          highlightedTitle="Credentials"
+          description="Courses and certifications I completed to learn new skills and stay sharp."
+        />
 
-      <Suspense
-        fallback={
-          <div className="h-64 rounded-2xl border border-neutral-200/70 bg-white flex items-center justify-center">
-            <Loader size="md" className="text-neutral-400" />
-          </div>
-        }
-      >
-        <CertificationsList />
-      </Suspense>
+        <Suspense
+          fallback={
+            <div className="h-64 rounded-2xl border border-neutral-200/70 bg-white flex items-center justify-center">
+              <Loader size="md" className="text-neutral-400" />
+            </div>
+          }
+        >
+          <CertificationsList />
+        </Suspense>
+      </div>
     </section>
   );
 }

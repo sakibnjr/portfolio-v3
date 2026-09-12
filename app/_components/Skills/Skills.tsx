@@ -10,37 +10,39 @@ export default function Skills() {
   return (
     <section
       id="skills"
-      className="py-16 sm:py-20 lg:py-24 scroll-mt-12 md:scroll-mt-16"
+      className="w-full py-16 sm:py-20 lg:py-24 scroll-mt-12 md:scroll-mt-16 border-b border-neutral-300"
     >
-      <SectionHeader
-        title="Skills &"
-        highlightedTitle="Technologies"
-        description="The programming languages, frameworks, and tools I use to build software."
-      />
+      <div className="max-w-7xl md:w-4/5 mx-auto px-4 md:px-0">
+        <SectionHeader
+          title="Skills &"
+          highlightedTitle="Technologies"
+          description="The programming languages, frameworks, and tools I use to build software."
+        />
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-4 lg:gap-5">
-        <div className="lg:col-span-7 flex flex-col">
-          <HeroCraftCard />
-        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-4 lg:gap-5">
+          <div className="lg:col-span-7 flex flex-col">
+            <HeroCraftCard />
+          </div>
 
-        <div className="lg:col-span-5 flex flex-col">
-          <ToolsMatrixCard />
-        </div>
+          <div className="lg:col-span-5 flex flex-col">
+            <ToolsMatrixCard />
+          </div>
 
-        <div className="lg:col-span-4 flex flex-col">
-          <FrontendCard />
-        </div>
+          <div className="lg:col-span-4 flex flex-col">
+            <FrontendCard />
+          </div>
 
-        <div className="lg:col-span-5 flex flex-col">
-          <StreakCard />
-        </div>
+          <div className="lg:col-span-5 flex flex-col">
+            <StreakCard />
+          </div>
 
-        <div className="lg:col-span-3 flex flex-col">
-          <WhatIBuildCard />
-        </div>
+          <div className="lg:col-span-3 flex flex-col">
+            <WhatIBuildCard />
+          </div>
 
-        <div className="md:col-span-2 lg:col-span-12 flex flex-col">
-          <BackendCard />
+          <div className="md:col-span-2 lg:col-span-12 flex flex-col">
+            <BackendCard />
+          </div>
         </div>
       </div>
     </section>

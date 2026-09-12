@@ -34,9 +34,9 @@ export default async function ProjectsPage() {
   const projects = (rawProjects as Project[]) || [];
 
   return (
-    <main className="max-w-7xl md:w-4/5 mx-auto px-4 md:px-0 min-h-screen flex flex-col justify-between">
+    <main className="w-full min-h-screen flex flex-col justify-between">
       <Header />
-      <div className="pt-16 sm:pt-20 md:pt-24 pb-12 sm:pb-16 flex-1">
+      <div className="max-w-7xl md:w-4/5 mx-auto px-4 md:px-0 pt-16 sm:pt-20 md:pt-24 pb-12 sm:pb-16 flex-1 w-full">
         <ProjectsArchive projects={projects} />
       </div>
       <Footer />

@@ -22,35 +22,37 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="py-16 sm:py-20 lg:py-24 scroll-mt-12 md:scroll-mt-16"
+      className="w-full py-16 sm:py-20 lg:py-24 scroll-mt-12 md:scroll-mt-16 border-b border-neutral-300"
     >
-      <div className="flex flex-col gap-8">
-        <Suspense
-          fallback={
-            <div>
-              <SectionHeader
-                title="Things I've"
-                highlightedTitle="Built"
-                description="A selection of web apps, open-source tools, and side projects I have built."
-              />
-              <div className="min-h-[460px] md:h-[520px] rounded-[2rem] border border-neutral-800/80 bg-[#0d0f15] flex flex-col items-center justify-center gap-3">
-                <Loader size="lg" className="text-white/80" />
+      <div className="max-w-7xl md:w-4/5 mx-auto px-4 md:px-0">
+        <div className="flex flex-col gap-8">
+          <Suspense
+            fallback={
+              <div>
+                <SectionHeader
+                  title="Things I've"
+                  highlightedTitle="Built"
+                  description="A selection of web apps, open-source tools, and side projects I have built."
+                />
+                <div className="min-h-[460px] md:h-[520px] rounded-[2rem] border border-neutral-800/80 bg-[#0d0f15] flex flex-col items-center justify-center gap-3">
+                  <Loader size="lg" className="text-white/80" />
+                </div>
               </div>
-            </div>
-          }
-        >
-          <ProjectsList />
-        </Suspense>
-
-        <div className="flex justify-center pt-2">
-          <Link
-            href="/projects"
-            scroll={false}
-            className="group inline-flex items-center gap-2 px-6 py-2.5 rounded-full border border-neutral-300 hover:border-neutral-900 bg-white hover:bg-neutral-900 text-neutral-800 hover:text-white text-sm font-medium transition-all duration-200 shadow-xs cursor-pointer"
+            }
           >
-            <span>Show More</span>
-            <HiArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />
-          </Link>
+            <ProjectsList />
+          </Suspense>
+
+          <div className="flex justify-center pt-2">
+            <Link
+              href="/projects"
+              scroll={false}
+              className="group inline-flex items-center gap-2 px-6 py-2.5 rounded-full border border-neutral-300 hover:border-neutral-900 bg-white hover:bg-neutral-900 text-neutral-800 hover:text-white text-sm font-medium transition-all duration-200 shadow-xs cursor-pointer"
+            >
+              <span>Show More</span>
+              <HiArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />
+            </Link>
+          </div>
         </div>
       </div>
     </section>
